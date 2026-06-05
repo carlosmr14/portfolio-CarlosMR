@@ -11552,6 +11552,7 @@ textarea.form-control-lg {
 body,
 html {
   height: 100%;
+}
 
 /* ================================================
    TEMA OSCURO — Paleta Púrpura / Violeta
@@ -11768,4 +11769,42 @@ footer a:hover { color: #ec4899; }
   .profile .dots-2 { width: 1.5vw; right: -2vw; }
   .profile .dots-3 { width: 1.5vw; left: 0.75vw; }
   .profile .dots-4 { width: 1.5vw; left: -2vw; }
+}
+
+/* Animación de aparición al hacer scroll */
+.animado {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botón volver arriba */
+#btn-arriba {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+#btn-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+}
+#btn-arriba:hover {
+    transform: translateY(-4px);
 }
