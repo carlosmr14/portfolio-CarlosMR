@@ -7,7 +7,6 @@
 // Use this file to add JavaScript to your project
 
 
-
 // año copy automatico
 document.addEventListener("DOMContentLoaded", function () {
     const anioActual = new Date().getFullYear();
