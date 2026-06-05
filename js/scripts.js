@@ -6,9 +6,9 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
-// ============================================
-// 1. AÑO DEL COPYRIGHT AUTOMÁTICO
-// ============================================
+
+
+// año copy automatico
 document.addEventListener("DOMContentLoaded", function () {
     const anioActual = new Date().getFullYear();
     const copyright = document.querySelector("footer .small");
@@ -17,10 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-// ============================================
-// 2. NAVBAR QUE CAMBIA AL HACER SCROLL
-// ============================================
+// navbar cambia al hacer scroll
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
@@ -34,10 +31,7 @@ window.addEventListener("scroll", function () {
     }
 });
 
-
-// ============================================
-// 3. ANIMACIÓN DE APARICIÓN AL HACER SCROLL
-// ============================================
+// animacion aparicion al hacer scroll
 document.addEventListener("DOMContentLoaded", function () {
     // Selecciona las tarjetas y secciones que queremos animar
     const elementos = document.querySelectorAll(".card, section, header");
@@ -56,9 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ============================================
-// 4. BOTÓN VOLVER ARRIBA
-// ============================================
+// boton volver arriba
 window.addEventListener("scroll", function () {
     const btnArriba = document.getElementById("btn-arriba");
     if (window.scrollY > 300) {
@@ -66,4 +58,10 @@ window.addEventListener("scroll", function () {
     } else {
         btnArriba.classList.remove("visible");
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("btn-arriba").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 });
